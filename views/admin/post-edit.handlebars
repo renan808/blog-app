@@ -1,0 +1,28 @@
+{{#if errors}}
+    <div class="alert alert-danger">{{errors}}</div>
+{{/if}}
+
+<h2>Edit Post</h2>
+
+<form action="/admin/post-edited" method="POST">
+    <input type="hidden" value="{{post._id}}" name="post">
+    <label for="title">Title: </label>
+    <input name="title" class="form-control" placeholder="Title">
+    <label for="desc">Description:</label>
+    <input type="text" name="desc" class="form-control" placeholder="Description">
+    <label for="slug">Slug:</label>
+    <input type="text" class="form-control" name="slug" placeholder="Slug">
+    <label for="content">Content:</label> <br>
+    <textarea name="content" rows="4" class="form-control"></textarea>
+    <label for="category">Category:</label>
+    <select class="custom-select" name="select">
+        {{#each cat}}
+            <option value="{{_id}}">{{name}}</option>
+        {{else}}
+            <option value="0">No category</option>
+        {{/each}}
+    </select>
+    <br>
+    <button class="btn btn-success mt-2">Edit Post</button>
+
+</form>

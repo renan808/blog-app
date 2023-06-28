@@ -1,0 +1,15 @@
+{{#each erros}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+
+{{/each}}
+<form action="/admin/categories/new" method="POST">
+    <label for="nome">Name: </label>
+    <input type="text" id="name" name="name" placeholder="Name category" class="form-control">
+    <label for="slug">Slug: </label>
+    <input type="text" name="slug" placeholder="Slug" id="slug" class="form-control">
+    <br>
+    <button class="btn btn-success">Create category</button>
+
+</form>

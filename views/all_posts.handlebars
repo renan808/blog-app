@@ -1,0 +1,12 @@
+<h1> All Posts</h1>
+{{#each posts}}
+<div class="card">
+    <div class="card-body">
+        <h4>{{title}}</h4>
+        <h6>{{description}}</h6>
+        <a href="/posts/{{slug}}"><button class="btn btn-primary mt-3 ml-0">View more</button></a>
+        <hr>
+        <h6>Published in {{date}}</h6>
+    </div>
+</div>
+{{/each}}

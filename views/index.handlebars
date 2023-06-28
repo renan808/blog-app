@@ -1,0 +1,39 @@
+<section class="container col-8 mx-auto" style=" background-color:rgba(224, 224, 224, 0.973);">
+    <div class="row">
+        <div class="col-md-8 max-auto mt-3">
+            <H1>Welcome to blog</H1>
+            <p>This is a simple blog where users can create posts, edit, and delete your posts.</p>
+                <hr style="min-width: auto; max: width 1500px; width: 715px;">
+                <p>Register now and post something</p>
+                <a href="/users/register"><button 
+                type="button" class="btn btn-primary mt-0">Register
+                </button></a>
+                <a href="/users/add-post"><button type="button" class="btn btn-primary">
+                    Make a post
+                </button></a>
+                <p class="pt-5"></p>
+            </div>
+        </div>
+</section>
+<hr style="min-width: auto; max: width 1500px; width: 720px;">
+
+
+<h2 style="margin-left: 185px;">Recent posts:</h2>
+
+{{#each posts}}
+        <div class="card container col-8 mx-auto">
+            <div class="card-body ml-n4">
+                <h3>{{title}}</h3>
+                <h6>{{description}}</h6>
+                <hr>
+                <small>Category: {{category.name}} </small>
+                <br>
+                <small>{{date}}</small>
+                <br>
+                <a href="/posts/{{slug}}"><button type="button" class="btn btn-primary mt-4">View more</button></a>
+            </div>
+        </div>
+        {{else}}
+            <h3>No post at the moment</h3>
+    {{/each}}
+

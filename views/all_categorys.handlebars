@@ -1,0 +1,14 @@
+{{#if category}}
+<h1>Categorys:</h1>
+    {{#each category}}
+        <div class="card">
+            <div class="card-body">
+                    <a href="/categorys/{{slug}}" class="link">{{name}}</a>
+                </div>
+            </div>
+    {{/each}}
+{{else}}
+    <h3>
+        No category registered at the moment
+    </h3>
+{{/if}}
