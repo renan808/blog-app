@@ -17,23 +17,25 @@
 </section>
 <hr style="min-width: auto; max: width 1500px; width: 720px;">
 
-
+{{#if posts}}
 <h2 style="margin-left: 185px;">Recent posts:</h2>
-
 {{#each posts}}
-        <div class="card container col-8 mx-auto">
-            <div class="card-body ml-n4">
-                <h3>{{title}}</h3>
-                <h6>{{description}}</h6>
-                <hr>
-                <small>Category: {{category.name}} </small>
-                <br>
-                <small>{{date}}</small>
-                <br>
-                <a href="/posts/{{slug}}"><button type="button" class="btn btn-primary mt-4">View more</button></a>
-            </div>
+    <div class="card container col-8 mx-auto">
+        <div class="card-body ml-n4">
+            <h3>{{title}}</h3>
+            <h6>{{description}}</h6>
+            <hr>
+            <small>Category: {{category.name}} </small>
+            <br>
+            <small>{{date}}</small>
+            <br>
+            <a href="/posts/{{slug}}"><button type="button" class="btn btn-primary mt-4">View more</button></a>
         </div>
-        {{else}}
-            <h3>No post at the moment</h3>
-    {{/each}}
+    </div>
+{{/each}}
+{{else}}
+<div class="container col-4 mx-auto">
+    <h3>No post at the moment</h3>
+</div>
+{{/if}}
 
