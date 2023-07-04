@@ -37,7 +37,6 @@ app.use((req, res, next) => {
     next()
 })
 
-//settings
 app.use(express.urlencoded({extended: true}))
 app.use(express.json())
 app.engine('handlebars', handlebars.engine({defaultLayout: 'main'}))
@@ -109,6 +108,12 @@ app.get('/categorys/:slug', (req, res) => {
         })
     })
 })
+
+app.get('/test', (req, res) => {
+    res.json("hello world")
+
+})
+
 
 //starting the server
 const PORT = process.env.PORT || 8089
