@@ -1,4 +1,4 @@
-// creating post model
+// post model
 const { default: mongoose, connection, Schema } = require("mongoose");
 
 

@@ -1,4 +1,4 @@
-//post blog with admin authentications
+//post blog with admin authentications and connection to mongodb
 
 const express = require('express')
 const handlebars = require('express-handlebars')
@@ -20,7 +20,7 @@ const db = require('./config/db')
 
 //session settings
 app.use(session({
-    secret: 'senha123x',
+    secret: 'pass123x',
     resave: true,
     saveUninitialized: true,
 }))

@@ -5,13 +5,16 @@
 {{/if}}
         
 <form action="/users/logged" method="POST">
-    <section>
-        <label for="username">Username</label>
-        <input id="username" name="username" type="text" autocomplete="username" required autofocus>
+    <section class="d-flex align-items-center justify-content-center">
+        <div>
+            <h1>Sing in</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="username" name="username" placeholder="Type your username" class="form-control" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Type your password" class="form-control" required>
+            <a><button type="submit" class="btn btn-primary mt-2">Login</button></a>
+        </div>
     </section>
-    <section>
-        <label for="current-password">Password</label>
-        <input id="current-password" name="password" type="password" autocomplete="current-password" required>
-    </section>
-    <button type="submit">Sign in</button>
+
+    </div>
 </form>

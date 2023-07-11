@@ -1,3 +1,5 @@
+//users model
+
 const mongoose = require('mongoose')
 
 
